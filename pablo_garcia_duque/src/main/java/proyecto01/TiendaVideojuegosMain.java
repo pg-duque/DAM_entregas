@@ -1,6 +1,6 @@
 package proyecto01;
 
-import clases.MyScanner;
+
 import exceptions.PrecioNegativoException;
 
 import java.util.ArrayList;
