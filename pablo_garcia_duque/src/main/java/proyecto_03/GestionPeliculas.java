@@ -88,12 +88,16 @@ public class GestionPeliculas {
     public static boolean validarCodigo(String codigo) {
 
         String validadores = "^[0-9]{2}[A-Z]{3}$";
-
         if (!codigo.matches(validadores)) {
             System.out.println("❌ Código incorrecto. Ejemplo válido: 123AB");
             return false;
         }
-
+        for (Pelicula pelicula : peliculas) {
+            if (pelicula.getCodigo().equals(codigo)) {
+                System.out.println("El código de la peli ya existe");
+                return false;
+            }
+        }
         return true;
     }
 
